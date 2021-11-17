@@ -122,11 +122,11 @@ ul.grid {
 }
 
 ul.grid.three-in-row {
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 33.3% 33.3% 33.3%;
 }
 
 ul.grid.four-in-row {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 25% 25% 25% 25%;
 }
 
 ul.grid.four-in-row li,
@@ -358,6 +358,9 @@ section.portfolio div.portfolio-items ul li div p {
 
 section.portfolio div.portfolio-items ul li div p:first-child {
   font-size: 18px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   font-weight: 700;
   letter-spacing: 0.06em;
   color: var(--color-black-2);
