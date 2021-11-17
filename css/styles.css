@@ -58,6 +58,8 @@ h2 {
   width: 1200px;
   display: flex;
   margin: 0 auto;
+  max-width: 100%;
+  padding: 0 15px;
   align-items: center;
   flex-direction: column;
 }
@@ -120,16 +122,21 @@ ul.grid {
 }
 
 ul.grid.three-in-row {
-  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 ul.grid.four-in-row {
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 ul.grid.four-in-row li,
 ul.grid.three-in-row li {
-  margin: 0 15px;
+  margin: 30px 15px 0 15px;
+}
+
+ul.grid.four-in-row li,
+ul.grid.three-in-row li:nth-child(-n + 3) {
+  margin-top: 0;
 }
 
 ul.grid li {
@@ -162,6 +169,14 @@ ul.flex li {
 /* SECTIONS */
 section.section {
   padding: 94px 0;
+}
+
+section.section.pb {
+  padding: 0 0 94px 0;
+}
+
+section.section.pt {
+  padding: 94px 0 0 0;
 }
 
 /* END OF SECTIONS */
@@ -360,7 +375,7 @@ section.portfolio div.portfolio-items ul li div p {
 
 /* BEGIN OF FOOTER */
 footer {
-  padding: 60px 5%;
+  padding: 60px 0;
   background-color: var(--color-light-black);
 }
 
@@ -371,6 +386,7 @@ footer address {
 footer address p {
   margin: 0;
   font-size: 14px;
+  line-height: 1.7;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 0.03em;
@@ -381,10 +397,15 @@ footer address a {
   margin: 9px 0;
   display: block;
   font-size: 14px;
+  line-height: 1.7;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+footer address a:last-child {
+  margin-bottom: 0;
+  line-height: unset;
 }
 /* END OF FOOTER */
